@@ -1,0 +1,49 @@
+
+{% extends "admin_dash.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/cam1">
+  
+  <table class="table table-striped" width="500" align="center" border="0">
+    <tr>
+      <td width="122">Serial Number</td>
+      <td width="62" ><label for="textfield"></label>
+      <input type="text" name="textfield" class="form-control" required id="textfield" /></td>
+    </tr>
+    <tr>
+      <td>Camera Model</td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" class="form-control" required id="textfield2" /></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" class="form-control" required id="textfield3" /></td>
+    </tr>
+    <tr>
+      <td>Latitude</td>
+      <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" class="form-control" required id="textfield4" /></td>
+    </tr>
+    <tr>
+      <td>Longtitude</td>
+      <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" class="form-control" required id="textfield5" /></td>
+    </tr>
+    <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="button" class="btn-primary" id="button" value="Submit" />
+      </div></td>
+  </tr>
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

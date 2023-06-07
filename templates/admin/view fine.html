@@ -1,0 +1,33 @@
+{% extends "admin_dash.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="" method="get"><table class="table table-striped" width="" border="1">
+    <tr>
+      <th scope="row">#</th>
+      <td>Details </td>
+      <td>Description</td>
+      <td>Fine</td>
+        <td></td>
+    </tr>
+    {% for i in data %}
+    <tr>
+      <th scope="row">&nbsp;{{ loop.index }}</th>
+      <td>{{ i['details'] }}</td>
+      <td>{{ i['description'] }}</td>
+      <td>{{ i['fine'] }}</td>
+      <td><a href="/delf/{{ i['fineid'] }}">Delete</a></td>
+    <tr>
+    {% endfor %}
+
+  </table>
+  <br />
+</form>
+</body>
+</html>
+{% endblock %}

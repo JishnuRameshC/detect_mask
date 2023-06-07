@@ -1,0 +1,53 @@
+{% extends "admin_dash.html" %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/g">
+  <div align="center">
+    <table class="table table-striped" width="200" border="0">
+      <tr>
+        <th scope="row">name</th>
+        <td><label for="textfield"></label>
+        <input type="text" class="form-control" required name="textfield" id="textfield" /></td>
+      </tr>
+      <tr>
+        <th scope="row">phone</th>
+        <td><label for="textfield2"></label>
+        <input type="tel" class="form-control" required pattern="[6-9][0-9]{9}" name="textfield2" id="textfield2" /></td>
+      </tr>
+      <tr>
+        <th scope="row">email</th>
+        <td><label for="textfield3"></label>
+          <label for="textfield3"></label>
+        <input type="email" class="form-control" required name="textfield3" id="textfield3" /></td>
+      </tr>
+      <tr>
+        <th scope="row">gender</th>
+        <td><input type="radio" required name="radio" id="radio" value="male" />
+          male
+          <label for="radio">
+            <input type="radio" required name="radio" id="radio2" value="female" />
+            female
+            </label></td>
+      </tr>
+      <tr>
+        <th scope="row">qualification</th>
+        <td><label for="textarea"></label>
+        <textarea name="textarea" class="form-control" required id="textarea" cols="45" rows="5"></textarea></td>
+      </tr>
+      <tr align="center">
+        <th colspan="2" scope="row"><input type="submit" class="btn-primary" name="button" id="button" value="Submit" /></th>
+      </tr>
+    </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

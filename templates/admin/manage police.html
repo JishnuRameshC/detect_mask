@@ -1,0 +1,40 @@
+{% extends "admin_dash.html" %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+
+<body>
+<form id="form1" name="form1" method="post" action="/manag">
+  <table width="576" class="table table-striped" border="1">
+    <tr>
+      <th width="12" scope="row">#</th>
+      <td width="58">name </td>
+      <td width="65">phone no</td>
+      <td width="52">email</td>
+      <td width="65">gender</td>
+      <td width="119">qualification</td>
+      <td width="159"></td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <th scope="row">&nbsp;{{ loop.index }}</th>
+      <td>{{ i['name'] }}</td>
+      <td>{{ i['phone'] }}</td>
+      <td>{{ i['email'] }}</td>
+      <td>{{ i['gender'] }}</td>
+        <td>{{ i['qualification'] }}</td>
+
+      <td><p><a href="/edi/{{i['trafficid']  }}">edit</a></p>
+      <p><a href="/dlt/{{i['trafficid'] }}">delete</a></p></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

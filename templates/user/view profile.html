@@ -1,0 +1,40 @@
+{% extends "user_dash.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <table width="200" border="1" class="table table-striped">
+        <tr align="center">
+            <th colspan="2"><img src="{{ data['photo'] }}" height="150" width="150"/> </th>
+        </tr>
+      <tr>
+        <th scope="row">name</th>
+        <td>{{data['uname']}}</td>
+      </tr>
+      <tr>
+        <th scope="row">phone</th>
+        <td>{{data['phone']}}</td>
+      </tr>
+      <tr>
+        <th scope="row">email</th>
+         <td>{{data['email']}}</td>
+      </tr>
+      <tr>
+        <th scope="row">gender</th>
+        <td>{{data['gender']}}</td>
+      </tr>
+
+
+    </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

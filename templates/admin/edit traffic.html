@@ -1,0 +1,54 @@
+{% extends "admin_dash.html" %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/updte/{{ data['trafficid'] }}">
+  <div align="center">
+    <table class="table table-striped" width="200" border="">
+      <tr>
+        <th scope="row">name</th>
+        <td><label for="textfield"></label>
+        <input type="text" name="textfield" class="form-control" required id="textfield" value="{{ data['name'] }}" /></td>
+      </tr>
+      <tr>
+        <th scope="row">phone</th>
+        <td><label for="textfield2"></label>
+        <input type="number" class="form-control" pattern="[6-9][0-9]{9}" name="textfield2" required id="textfield2"  value="{{ data['phone'] }}" /></td>
+      </tr>
+      <tr>
+        <th scope="row">email</th>
+        <td><label for="textfield3"></label>
+          <label for="textfield3"></label>
+        <input type="email" class="form-control" required name="textfield3" id="textfield3" value="{{ data['email'] }}" /></td>
+      </tr>
+      <tr>
+        <th scope="row">gender</th>
+        <td><input type="radio" required name="radio" id="radio" value="male" {% if data['gender']=="male"  %}checked{% endif %}/>
+          male
+          <label for="radio">
+            <input type="radio" required name="radio" id="radio2" value="female" {% if data['gender']=="female"  %}checked{% endif %}/>
+            female
+            </label></td>
+      </tr>
+      <tr>
+        <th scope="row">qualification</th>
+        <td><label for="textarea"></label>
+        <textarea name="textarea" class="form-control" required id="textarea" cols="45" rows="5">{{ data['qualification'] }}
+        </textarea></td>
+      </tr>
+      <tr align="center">
+        <th colspan="2" scope="row"><input type="submit" class="btn-primary" name="button" id="button" value="Submit" /></th>
+      </tr>
+    </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "user_dash.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="/sc1">
+  <div align="center">
+    <table class="table table-striped" width="200" border="0">
+      <tr>
+        <th scope="row">Complaint</th>
+        <td><label for="textfield"></label>
+            <textarea class="form-control" required rows="6" cols="45" name="t"></textarea></td>
+      </tr>
+      <tr align="center">
+
+        <td colspan="2"><label for="textfield2"></label>
+        <input class="btn-primary" type="submit" name="s" id="s" value="send" /></td>
+      </tr>
+    </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}
